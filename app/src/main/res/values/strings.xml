@@ -2,4 +2,6 @@
     <string name="app_name">LackVirtueRepairer</string>
     <string name="text_gongdevalue">功德值:</string>
     <string name="text_pietyvalue">虔诚值:</string>
+    <string name="number_zero">0</string>
+    <string name="text_button">按钮</string>
 </resources>
