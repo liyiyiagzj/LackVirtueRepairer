@@ -5,4 +5,9 @@
     <string name="text_pietyvalue">Piety Value:</string>
     <string name="number_zero">0</string>
     <string name="text_button">Button</string>
+    <string name="text_currentgongdevalue">Current GongDe value:</string>
+    <string name="text_currentpietyvalue">Current Piety Value:</string>
+    <string name="text_TheRestOfBuddhaLaughsWithYou">The rest of \"Buddha laughs with you\":</string>
+    <string name="text_Once">Once</string>
+    <string name="text_BuddhaLaughsWithYou">Buddha laughs with you</string>
 </resources>

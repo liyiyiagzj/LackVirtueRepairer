@@ -15,78 +15,172 @@
 
     <Button
         android:id="@+id/Button"
-        android:onClick="TestButtonA"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
+        android:onClick="TestButtonA"
         android:text="@string/text_button" />
 
     <TableLayout
-        android:id="@+id/TabUp"
-        android:layout_width="400dp"
+        android:id="@+id/TabDa"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:layout_marginStart="15dp"
         android:layout_marginTop="15dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginBottom="15dp"
-        android:stretchColumns="1">
+        android:layout_marginEnd="15dp">
 
-        <TableRow
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:minHeight="20dp">
+            android:layout_height="20dp">
 
-            <TextView
-                android:id="@+id/GongDeValueText"
+            <TableRow
+                android:id="@+id/GongDeValueTab"
                 android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:text="@string/text_gongdevalue" />
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-            <ProgressBar
-                android:id="@+id/GongDeValue"
-                android:layout_marginStart="5dp"
-                style="@android:style/Widget.ProgressBar.Horizontal"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:text="@string/text_currentgongdevalue" />
+
+                <TextView
+                    android:id="@+id/GongDeValueA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:gravity="center"
+                    android:text="@string/number_zero" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@id/GongDeValueTab"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:text="@string/text_currentpietyvalue" />
+
+                <TextView
+                    android:id="@+id/PietyValueA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:gravity="center"
+                    android:text="@string/number_zero" />
+            </TableRow>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TableLayout
+            android:id="@+id/TabUp"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:stretchColumns="1">
+
+            <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="20dp"
-                android:max="100"/>
+                android:minHeight="20dp">
 
-            <TextView
-                android:id="@+id/GongDeValueVal"
-                android:text="@string/number_zero"
-                android:layout_marginStart="5dp"
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:gravity="center"/>
-        </TableRow>
+                <TextView
+                    android:id="@+id/GongDeValueText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:text="@string/text_gongdevalue"
+                    android:textAlignment="viewEnd"
+                    android:textAllCaps="false" />
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:minHeight="20dp">
+                <ProgressBar
+                    android:id="@+id/GongDeValue"
+                    android:layout_marginStart="5dp"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:max="100"/>
 
-            <TextView
-                android:text="@string/text_pietyvalue"
-                android:id="@+id/PietyValueText"
-                android:layout_marginTop="15dp"
-                android:layout_width="wrap_content"
-                android:layout_height="20dp" />
+                <TextView
+                    android:id="@+id/GongDeValueVal"
+                    android:text="@string/number_zero"
+                    android:layout_marginStart="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:gravity="center"/>
+            </TableRow>
 
-            <ProgressBar
-                android:id="@+id/PietyValue"
-                style="@android:style/Widget.ProgressBar.Horizontal"
-                android:layout_marginStart="5dp"
+            <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="20dp"
-                android:layout_marginTop="15dp"
-                android:max="300" />
+                android:minHeight="20dp">
 
-            <TextView
-                android:text="@string/number_zero"
-                android:id="@+id/PietyValueVal"
-                android:layout_marginTop="15dp"
-                android:layout_marginStart="5dp"
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:gravity="center"/>
-        </TableRow>
+                <TextView
+                    android:id="@+id/PietyValueText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/text_pietyvalue" />
+
+                <ProgressBar
+                    android:id="@+id/PietyValue"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:layout_marginStart="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="15dp"
+                    android:max="300" />
+
+                <TextView
+                    android:text="@string/number_zero"
+                    android:id="@+id/PietyValueVal"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:gravity="center"/>
+
+            </TableRow>
+
+            <GridLayout
+                android:columnCount="4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="@string/text_TheRestOfBuddhaLaughsWithYou"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/BuddhaLaughsQuantity"
+                    android:text="@string/number_zero"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="20dp"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:text="@string/text_Once"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"/>
+
+                <Button
+                    android:id="@+id/BuddhaLaughsButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:enabled="false"
+                    android:onClick="BuddhaLaughsClick"
+                    android:text="@string/text_BuddhaLaughsWithYou" />
+            </GridLayout>
+
+        </TableLayout>
+
     </TableLayout>
+
 </RelativeLayout>

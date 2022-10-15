@@ -4,4 +4,9 @@
     <string name="text_pietyvalue">虔诚值:</string>
     <string name="number_zero">0</string>
     <string name="text_button">按钮</string>
+    <string name="text_currentgongdevalue">当前功德值:</string>
+    <string name="text_currentpietyvalue">当前虔诚值：</string>
+    <string name="text_TheRestOfBuddhaLaughsWithYou">剩余 “佛祖陪你一起笑” :</string>
+    <string name="text_Once">次</string>
+    <string name="text_BuddhaLaughsWithYou">佛祖陪你笑</string>
 </resources>
