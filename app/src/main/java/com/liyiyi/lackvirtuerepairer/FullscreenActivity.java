@@ -1,6 +1,7 @@
 package com.liyiyi.lackvirtuerepairer;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.media.MediaPlayer;
 import android.media.SoundPool;
 import android.os.Bundle;
@@ -8,8 +9,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.WindowCompat;
 
 /**
  * 显示和隐藏具有用户交互的系统 UI（即状态栏和导航/系统栏）的全屏活动示例。
@@ -39,6 +42,7 @@ public class FullscreenActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //WindowCompat.setDecorFitsSystemWindows(getWindow(), false);
         setContentView(R.layout.activity_fullscreen);
 
         GongDeValueBar = findViewById(R.id.GongDeValue);
@@ -101,6 +105,13 @@ public class FullscreenActivity extends AppCompatActivity {
 
         PietyValueVal.setText(String.valueOf(PietyInt));
         PietyValueA.setText(String.valueOf(PietyInt));
+
+//        Context context = getApplicationContext();
+//        CharSequence text = "你获得了1功德";
+//        int duration = Toast.LENGTH_SHORT;
+//
+//        Toast toast = Toast.makeText(context, text, duration);
+//        toast.show();
     }
 
     public void BuddhaLaughsClick(View view) {
@@ -111,6 +122,13 @@ public class FullscreenActivity extends AppCompatActivity {
         GongDeValueBar.setProgress(GongDeInt);
         PietyValueBar.setProgress(PietyInt);
         BuddhaLaughsVal.setText(String.valueOf(BuddhaLaughsInt));
+
+        Context context = getApplicationContext();
+        CharSequence text = "佛祖正在陪你一起笑";
+        int duration = Toast.LENGTH_SHORT;
+
+        Toast toast = Toast.makeText(context, text, duration);
+        toast.show();
 
         if (BuddhaLaughsInt<=0)
         {

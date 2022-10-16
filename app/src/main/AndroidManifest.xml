@@ -10,13 +10,14 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.LackVirtueRepairer"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         tools:targetApi="31">
+
+
         <activity
             android:name=".FullscreenActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:exported="true"
-            android:label="@string/app_name"
             android:theme="@style/Theme.LackVirtueRepairer.Fullscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,5 +26,6 @@
             </intent-filter>
         </activity>
     </application>
-
+    <!--            android:label="@string/app_name"-->
+    <!--        android:theme="@style/Theme.LackVirtueRepairer"-->
 </manifest>
