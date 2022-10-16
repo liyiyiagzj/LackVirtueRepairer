@@ -1,6 +1,8 @@
 package com.liyiyi.lackvirtuerepairer;
 
+import android.annotation.SuppressLint;
 import android.media.MediaPlayer;
+import android.media.SoundPool;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -25,6 +27,11 @@ public class FullscreenActivity extends AppCompatActivity {
 
     private Button BuddhaLaughsButton;
 
+    private SoundPool soundPool;
+
+    private int WoodenFishSoundID;
+    private int BuddhaLaughsSoundID;
+
     int GongDeInt = 0;
     int PietyInt = 0;
     int BuddhaLaughsInt = 0;
@@ -44,7 +51,9 @@ public class FullscreenActivity extends AppCompatActivity {
         BuddhaLaughsVal = findViewById(R.id.BuddhaLaughsQuantity);
 
         BuddhaLaughsButton = findViewById(R.id.BuddhaLaughsButton);
+        Button woodenFishButton = findViewById(R.id.WoodenFishButton);
 
+        initSound();
     }
 
     private void PlayMusic(int MusicId) {
@@ -54,7 +63,7 @@ public class FullscreenActivity extends AppCompatActivity {
 
     public void TestButtonA(View view) {
 
-        PlayMusic(R.raw.woodenfish);
+        PlaySound(WoodenFishSoundID);
 
         int GongDeMax = GongDeValueBar.getMax();
         int PietyMax = PietyValueBar.getMax();
@@ -107,5 +116,27 @@ public class FullscreenActivity extends AppCompatActivity {
         {
             BuddhaLaughsButton.setEnabled(false);
         }
+
+        PlaySound(BuddhaLaughsSoundID);
+    }
+
+    @SuppressLint("NewApi")
+    private void initSound() {
+        soundPool = new SoundPool.Builder().build();
+        WoodenFishSoundID = soundPool.load(this, R.raw.woodenfish, 1);
+        BuddhaLaughsSoundID = soundPool.load(this,R.raw.buddhalaughs,1);
+
+    }
+
+    private void PlaySound(int SoundID) {
+        soundPool.play(
+                SoundID,
+                1f,      //左耳道音量【0~1】
+                1f,      //右耳道音量【0~1】
+                0,         //播放优先级【0表示最低优先级】
+                0,         //循环模式【0表示循环一次，-1表示一直循环，其他表示数字+1表示当前数字对应的循环次数】
+                1          //播放速度【1是正常，范围从0~2】
+        );
     }
 }
+

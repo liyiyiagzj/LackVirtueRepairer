@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 背景描述：白底 四角圆角 绿色边框 长方形
+     layer-list：实现的就是一种叠加的效果，可以将图片或者各种效果叠加起来
+     solid：内部填充，填入颜色
+     corners：四个角圆角，radius即为圆角半径
+     stroke：描边
+     padding：边界填充 -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <solid
+                android:color="#FFFFFF00" />
+            <corners
+                android:topLeftRadius="5dp"
+                android:topRightRadius="5dp"
+                android:bottomRightRadius="5dp"
+                android:bottomLeftRadius="5dp" />
+            <padding
+                android:left="5dp"
+                android:top="5dp"
+                android:right="5dp"
+                android:bottom="5dp"
+                />
+        </shape>
+    </item>
+</layer-list>

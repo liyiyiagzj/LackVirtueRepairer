@@ -1,6 +1,6 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <!-- 基本应用程序主题。 -->
-    <style name="Theme.LackVirtueRepairer" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.LackVirtueRepairer" parent="Theme.MaterialComponents.DayNight.DarkActionBar.Bridge">
         <!-- 主要品牌颜色。 -->
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>

@@ -14,12 +14,14 @@
         tools:ignore="ContentDescription"/>
 
     <Button
-        android:id="@+id/Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:onClick="TestButtonA"
-        android:text="@string/text_button" />
+        android:id="@+id/WoodenFishButton"
+        android:layout_width="340dp"
+        android:layout_height="400dp"
+        android:layout_below="@+id/TabDa"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="13dp"
+        android:background="@drawable/btn_gongdebutton"
+        android:onClick="TestButtonA" />
 
     <TableLayout
         android:id="@+id/TabDa"
@@ -151,12 +153,14 @@
                 android:layout_height="wrap_content">
 
                 <TextView
+                    android:layout_marginTop="5dp"
                     android:text="@string/text_TheRestOfBuddhaLaughsWithYou"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
 
                 <TextView
                     android:id="@+id/BuddhaLaughsQuantity"
+                    android:layout_marginTop="5dp"
                     android:text="@string/number_zero"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -165,12 +169,15 @@
 
                 <TextView
                     android:text="@string/text_Once"
+                    android:layout_marginTop="5dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="10dp"/>
 
                 <Button
                     android:id="@+id/BuddhaLaughsButton"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/btn_buddhalaughs"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_columnWeight="1"
