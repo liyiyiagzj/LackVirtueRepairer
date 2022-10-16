@@ -1,5 +1,6 @@
 package com.liyiyi.lackvirtuerepairer;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -43,9 +44,17 @@ public class FullscreenActivity extends AppCompatActivity {
         BuddhaLaughsVal = findViewById(R.id.BuddhaLaughsQuantity);
 
         BuddhaLaughsButton = findViewById(R.id.BuddhaLaughsButton);
+
+    }
+
+    private void PlayMusic(int MusicId) {
+        MediaPlayer music = MediaPlayer.create(this, MusicId);
+        music.start();
     }
 
     public void TestButtonA(View view) {
+
+        PlayMusic(R.raw.woodenfish);
 
         int GongDeMax = GongDeValueBar.getMax();
         int PietyMax = PietyValueBar.getMax();
